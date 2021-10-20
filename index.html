@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to get the current date. </title>
+</head>
+
+<style>
+    .container {
+        font-size: 23px;
+        background-color: rgb(5, 184, 255);
+        border: 2px solid #000;
+        padding: 34px;
+        margin: 4px;
+        text-align: center;
+    }
+
+    #time {
+        font-weight: bold;
+    }
+
+    #today{
+        font-weight: 700;
+    }
+</style>
+<body>
+    <div class="container">
+        Current Date is <span id="today"></span>
+    </div>
+
+    <script>
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+    var yyyy = today.getFullYear();
+
+    today = mm + '/' + dd + '/' + yyyy;
+    document.getElementById("today").innerHTML = today;
+    </script>
+</body>
+</html>
